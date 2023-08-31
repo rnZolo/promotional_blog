@@ -36,9 +36,14 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     { 
-        // dd(request()->rating->numfmt_format);
-        $new = new Comments(request()->commenter,
-                request()->comment , request()->rating);
+        // dd(request()->rating());
+        $new = new Comments();
+        $new->name = $request->input('commenter', '');
+        $new->comment =  $request->input('comment', '');
+        $new->rating =  $request->input('rating', '');
+        $new->update_status = $request->input('update_status', '0');
+        dd($new);
+        $new->create();
         
     }
 

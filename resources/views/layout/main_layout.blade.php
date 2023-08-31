@@ -13,20 +13,22 @@
 
     </style>
 </head>
-<body class="w-full  flex flex-col justify-center items-center" id="body">
-    <div class="navbar backdrop-filter backdrop-blur-lg sticky top-0 text-base p-4">
-        <div class="w-full flex justify-center gap-5">
+<body class="w-full flex flex-col justify-center items-center  relative" id="body">
+    <div class="absolute top-0 navbar bg-white/30 backdrop-filter backdrop-blur-lg  text-base w-full flex justify-center gap-5 text-black z-10" >
             <a href="{{ route('welcome') }}">Home</a>
-            <a href="">About</a>
-            <a href="">Destination</a>
+            <a href="{{ route('about') }}">About</a>
+            <a href="">Where To Go</a>
             <a href="">Gallery</a>
             <a href="{{ route('comment.index') }}">Contact Us</a>
-        </div>
       </div>
-    <div class="p-1 w-full h-screen" >    
+    <div class=" w-full h-fit bg-[url({{ asset('assets/img/bg1.jpg') }})] bg-cover bg-no-repeat">    
         @yield('welcome')
+        @yield('about')
+        @yield('where')
+        @yield('gallery')
         @yield('contactus')
+        <footer class="w-full h-[50px] grid place-items-center text-black"> Acacia-Soft {{ now()->year }}</footer>
     </div>
-    <footer class="w-full h-[50px] grid place-items-center"> Acacia-Soft {{ now()->year }}</footer>
+    
 </body>
 </html>

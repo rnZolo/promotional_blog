@@ -17,6 +17,10 @@ Route::get('/blogs', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/about', function(){
+    return view('page.about');
+})->name('about');
+
 Route::prefix('ContactUs')->group(function (){
     Route::resource('comment', 'CommentsController');
 });

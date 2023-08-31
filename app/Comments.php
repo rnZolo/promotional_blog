@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comments extends Model
 {
-    protected $commenter  = "";
-    protected $comment = "";
-    protected $rating = "";
+    protected $table = 'comments';
     
+    protected $fillable = [
+                'name', 'comment', 'rating', 'update_status'
+    ];
 }

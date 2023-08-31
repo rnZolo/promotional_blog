@@ -14,7 +14,7 @@ class AddUpdateStatusToCommentsTable extends Migration
     public function up()
     {
         Schema::table('comments', function (Blueprint $table) {
-            $table->boolean('update_status');
+            $table->boolean('update_status')->default('0');
         });
     }
 

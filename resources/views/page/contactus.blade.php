@@ -10,7 +10,7 @@
             @csrf
             <label for="commenter" class="blocks ">Name : <input type="text" name="commenter" id="commenter" class="px-2 w-full max-w-[500px] p-1"></label>
             <textarea name="comment" id="" rows="4" style="resize:none;" class="w-full p-2"></textarea>
-            <label for="add_ratings"> Add Ratings :  <input type="checkbox" name="add_ratings" value="true" id="add_ratings"></label>
+            <label for="add_ratings"> Add Ratings :  <input type="checkbox" name="add_rating" value="true" id="add_rating"></label>
             <div class="wrapper">
                 <input type="checkbox" name="rating" id="st1" value="1" />
                 <label for="st1"></label>
