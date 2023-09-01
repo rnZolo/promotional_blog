@@ -10,19 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::redirect('/', '/blogs', 302);
+    Route::redirect('/', '/blogs', 302);
 
 
-Route::get('/blogs', function () {
-    return view('welcome');
-})->name('welcome');
+    Route::get('/blogs', function () {
+                        return view('welcome');
+                        })->name('welcome');
 
-Route::get('/about', function(){
-    return view('page.about');
-})->name('about');
+    Route::get('/about', function(){
+                        return view('page.about');
+                        })->name('about');
 
-Route::prefix('ContactUs')->group(function (){
-    Route::resource('comment', 'CommentsController');
-});
+    Route::get('/where-to-go', function(){
+                        return view('page.wheretogo');
+                        })->name('wheretogo');              
+
+    Route::get('/gallery', function(){
+                        return view('page.gallery');
+                        })->name('gallery');
+
+    Route::prefix('ContactUs')->group(function (){
+                        Route::resource('comment', 'CommentsController');
+                         });
 
 

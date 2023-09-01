@@ -2,9 +2,9 @@
 
 @section('about')
        <div class="w-full h-fit min-h-screen  px-[3%] text-black pt-[100px] flex gap-3">
-              <div class="w-[15%] h-full p-3 ">
-                     <h1 class="text-xl uppercase font-bold" >Iloilo</h1>
-                     <hr class="my-12 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50 my-3" />
+              <div class="min-h-full w-[15%] p-3 border-r-[2px] border-slate-400 ">
+                     <h1 class="text-xl uppercase font-bold p-1 " >Iloilo</h1>
+                     <hr class="my-1 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50" />
                      <div class="w- flex flex-col ">
                             <p class="text-sm p-1 px-3"><span class="font-bold">Zip code: </span>5000</p>
                             <p class="text-sm p-1 px-3"><span class="font-bold">Area Code: </span>33</p>
@@ -96,49 +96,108 @@
                             </div>
                      </div>
               </div>
-              <div class="w-full h-full p-3 border-l-[2px] border-slate-400">
+              <div class="w-full h-full p-3 ">
                      <div class="flex flex-start gap-5">
-                            <h2 class="text-lg font-bold ">History</h2>
-                            <h2 class="text-lg font-bold ">Map</h2>
-                            <h2 class="text-lg font-bold ">Facts</h2>
+                            <h2 class="active-nav text-lg font-bold history-btn p-2 pb-0 ">History</h2>
+                            <h2 class="text-lg font-bold map-btn p-2 pb-0">Map</h2>
+                            <h2 class="text-lg font-bold facts-btn p-2 pb-0">Faqs</h2>
                      </div>
-                     <hr class="my-12 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50 my-3" />
-                     <p class="p-2 indent-10">
-                            In the Pre-Spanish period, Filipino settlements were established near water bodies like rivers. The Iloilo region had bamboo and grass huts along the coasts and rivers, utilizing the surrounding natural resources for clothing, shelter, and tools. Public buildings and places of worship were lacking.
-                     </p>
-                     <p class="p-2 indent-10">
-                            During the Spanish Period, the dispersed barangay settlements evolved into towns and provinces. Parish churches, along with town halls and plazas, became central to town layouts. The government seat shifted to different locations due to threats, eventually settling near the Iloilo River. A road network radiated from a fort and remains in use today.     
-                     </p>
-                     <p class="p-2 indent-10">
-                            In the American Period, economic development in Iloilo was driven by road networks. British influence contributed to the sugar industry, and infrastructure projects linked warehouses to towns. Working-class districts were introduced, and architectural styles evolved. Iloilo became a chartered city in 1937, integrating American architectural elements.       
-                     </p>
-                     <p class="p-2 indent-10">
-                            After World War II, economic decline occurred due to factors like the sugar industry's decline. Recovery efforts focused on urban planning. Iloilo City joined the National Planning Commission's strategies. Modernization brought growth through fish ports, a seaport, and commerce, establishing Iloilo City as the Regional Center of Western Visayas.
-                     </p>
-                     <p class="p-2 indent-10 mb-10">
-                            In 1977, a Comprehensive Urban Development Plan was approved but struggled with rapid urbanization. By 1993, a new plan was prepared to address urban challenges, but its implementation awaited approval from the Housing and Land Use Regulatory Board (HLURB).
-                     </p>
+                     <hr class="mb-3 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50 " />
+                     <div class="history w-full h-full">
+                            <ul class="steps steps-vertical">
+                                   <li data-content="" class="step text-base text-left p-0">
+                                          In 1977, a Comprehensive Urban Development Plan was approved but struggled with rapid urbanization. By 1993, a new plan was prepared to address urban challenges, but its implementation awaited approval from the Housing and Land Use Regulatory Board (HLURB).
+                                   </li>
+                                   <li data-content="" class="step text-base text-left p-0 ">
+                                          After World War II, economic decline occurred due to factors like the sugar industry's decline. Recovery efforts focused on urban planning. Iloilo City joined the National Planning Commission's strategies. Modernization brought growth through fish ports, a seaport, and commerce, establishing Iloilo City as the Regional Center of Western Visayas.
+                                   </li>
+                                   <li data-content="" class="step text-base text-left p-0 ">
+                                          In the American Period, economic development in Iloilo was driven by road networks. British influence contributed to the sugar industry, and infrastructure projects linked warehouses to towns. Working-class districts were introduced, and architectural styles evolved. Iloilo became a chartered city in 1937, integrating American architectural elements.       
+                                   </li>
+                                   <li data-content="" class="step text-base text-left p-0 ">
+                                          During the Spanish Period, the dispersed barangay settlements evolved into towns and provinces. Parish churches, along with town halls and plazas, became central to town layouts. The government seat shifted to different locations due to threats, eventually settling near the Iloilo River. A road network radiated from a fort and remains in use today.     
+                                   </li>
+                                   <li data-content="" class="step text-base text-left p-0 ">
+                                          In the Pre-Spanish period, Filipino settlements were established near water bodies like rivers. The Iloilo region had bamboo and grass huts along the coasts and rivers, utilizing the surrounding natural resources for clothing, shelter, and tools. Public buildings and places of worship were lacking.
+                                   </li>
+                                 </ul>
+                     </div>
+                     <div class="map w-full h-full">
                      {{-- map --}}
-                     <div class="flex justify-center gap-6">
-                            <div class="w-[40%]">
-                                   <img src="{{ asset('assets/img/Iloilo_First_Legislative_District_0.png') }}" alt="iloilo" srcset="" class="h-[400px]">
-                            </div>
-                            <div class="w-[40%]">
-                                   <iframe class="h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88699.52880569769!2d122.51314347178354!3d10.734298207910358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee56fe538d781%3A0xe8250cd6bc30a488!2sIloilo%20City%2C%20Iloilo!5e0!3m2!1sen!2sph!4v1693472656413!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="flex justify-center gap-6">
+                                   <div class="w-[40%]">
+                                          <img src="{{ asset('assets/img/districts/Iloilo_First_Legislative_District_0.png') }}" alt="iloilo" srcset="" class="h-[400px]">
+                                   </div>
+                                   <div class="w-[40%]">
+                                          <iframe class="h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88699.52880569769!2d122.51314347178354!3d10.734298207910358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee56fe538d781%3A0xe8250cd6bc30a488!2sIloilo%20City%2C%20Iloilo!5e0!3m2!1sen!2sph!4v1693472656413!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                   </div>
                             </div>
                      </div>
-                     {{-- facts --}}
-                     <div class="flex flex-col gap-3">
-                            <div class="collapse collapse-arrow join-item">
-                                   <input type="radio" name="my-accordion-4" checked="checked" /> 
-                                   <div class="collapse-title text-sm font-medium">
-                                          facts
+                     {{-- faq --}}
+                     <div class="facts w-full h-full flex flex-col gap-5">
+                            <h1 class="text-[2vw]">Frequently Ask Questions</h1>
+                            <details class="collapse collapse-plus my-bgs">
+                                   <summary class="collapse-title text-xl font-medium">
+                                          Where in the Philippines is Iloilo located?
+                                   </summary>
+                                   <div class="collapse-content"> 
+                                     <p>
+                                          Iloilo is occupies the central and eastern section of Panay island in the Western Visayas region.
+                                     </p>
                                    </div>
-                                   <div class="collapse-content">  
-                                          info   
+                            </details>
+                            <details class="collapse collapse-plus my-bgs">
+                                   <summary class="collapse-title text-xl font-medium">
+                                          Is Iloilo a city or province?
+                                   </summary>
+                                   <div class="collapse-content"> 
+                                     <p>
+                                          Iloilo is a province with its capital of the same name.
+                                     </p>
                                    </div>
-                                 </div>
-                     </div>
+                            </details>
+                            <details class="collapse collapse-plus my-bgs">
+                                   <summary class="collapse-title text-xl font-medium">
+                                          What is the Capital of Iloilo?
+                                   </summary>
+                                   <div class="collapse-content"> 
+                                     <p>
+                                          The capital of Iloilo is Iloilo City.
+                                     </p>
+                                   </div>
+                            </details>
+                            <details class="collapse collapse-plus my-bgs">
+                                   <summary class="collapse-title text-xl font-medium">
+                                          How many islands are in Iloilo?
+                                   </summary>
+                                   <div class="collapse-content"> 
+                                     <p>
+                                          There are 55 islands in the province of Iloilo.
+                                     </p>
+                                   </div>
+                            </details>
+                            <details class="collapse collapse-plus my-bgs">
+                                   <summary class="collapse-title text-xl font-medium">
+                                          What does Iloilo mean?
+                                   </summary>
+                                   <div class="collapse-content"> 
+                                     <p>
+                                          Iloilo came from the Hiligaynon word “Ilong-Ilong” or the Kinaray-a “Irong-Irong”, meaning nose-like, which 
+                                          refers to the nose-shaped islet formed by the river now called Iloilo River.
+                                     </p>
+                                   </div>
+                            </details>
+                            <details class="collapse collapse-plus my-bgs">
+                                   <summary class="collapse-title text-xl font-medium">
+                                          What is Iloilo famous?
+                                   </summary>
+                                   <div class="collapse-content"> 
+                                     <p>
+                                          Iloilo is famous for Dinagyang Festival, heritage sites, la paz batchoy, and pancit molo.
+                                     </p>
+                                   </div>
+                            </details>
+                     </div>        
               </div>
        </div>
 @endsection
