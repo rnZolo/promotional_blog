@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRatingToCommentsTable extends Migration
+class CreateInformationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class AddRatingToCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::table('comments', function (Blueprint $table) {
-            $table->integer('rating');
-            // $table->boolean('update_status')->d->change();
-        
+        Schema::create('information', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->text('title');
+            $table->longText('body');
+            $table->timestamps();
         });
     }
 
@@ -27,8 +28,6 @@ class AddRatingToCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('comments', function (Blueprint $table) {
-            // Schema::drop('udpate_status');
-        });
+        Schema::dropIfExists('information');
     }
 }

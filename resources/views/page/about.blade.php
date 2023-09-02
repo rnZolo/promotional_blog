@@ -1,202 +1,110 @@
 @extends('layout.main_layout')
 
 @section('about')
-       <div class="w-full h-fit min-h-screen  px-[3%] text-black pt-[100px] flex gap-3">
-              <div class="min-h-full w-[15%] p-3 border-r-[2px] border-slate-400 ">
+       <div class="z-20 w-full h-fit min-h-screen px-[3%] text-black pt-[100px] flex gap-3 relative">
+{{-- sidebar --}}
+              <div class="min-h-full min-w-[250px] p-3 my-bgs border-slate-400  rounded-lg">
                      <h1 class="text-xl uppercase font-bold p-1 " >Iloilo</h1>
                      <hr class="my-1 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50" />
-                     <div class="w- flex flex-col ">
-                            <p class="text-sm p-1 px-3"><span class="font-bold">Zip code: </span>5000</p>
-                            <p class="text-sm p-1 px-3"><span class="font-bold">Area Code: </span>33</p>
-                            <p class="text-sm p-1 px-3"><span class="font-bold block">Land Area: </span><span class=" block ">78.34 square kilometers</span></p>
-                            <p class="text-sm p-1 px-3"><span class="font-bold block">Population: </span><span class=" block ">461,841 (EP, CY 2016)</span></p>
-                            <div class="join join-vertical w-full">
+                     <div class="flex flex-col w-[210px] ">
+                            @foreach($sideInfo1 as $title => $body)
+                                   <p class="text-sm p-1 px-3"><span class="font-bold capitalize">{{ $title }}: </span>{{ $body }}</p>
+                            @endforeach
+                            <div class="join join-vertical w-ful flex flex-col gap-2">
                                    <hr class="my-1 h-0.5 border-t-0 bg-slate-300 opacity-100 dark:opacity-50 my-3" />
-                                   <details class="collapse collapse-arrow ">
-                                     <summary class="collapse-title text-sm font-medium">
-                                          <p class="text-sm"><span class="font-bold">More...</span></p>
-                                     </summary>
-                                     <div class="collapse-content flex flex-col gap-1"> 
-                                          <p class="text-sm"><span class="font-bold">Population Density: <br></span> 5,836 persons per square kilometer</p>  
-                                          <p class="text-sm"><span class="font-bold">Number of Households: <br></span> 90,681 (2010 Census)</p>     
-                                          <p class="text-sm"><span class="font-bold">Population Growth: <br></span> 1.02% (PSA: 2015 Census)</p>     
-                                          <p class="text-sm"><span class="font-bold">Coastline Area: <br></span> 21.3 kilometers</p>     
-                                          <p class="text-sm"><span class="font-bold">Lingua franca: <br></span> Filipino, Hiligaynon, Kinaray-a, English</p> 
-                                          <p class="text-sm"><span class="font-bold">Economic activity: <br></span> 21.3 kilometers</p>     
-                                          <p class="text-sm"><span class="font-bold">Coastline Area: <br></span> 21.3 kilometers</p>     
-                                     </div>
-                                   </details>
-                                   <hr class="my-1 h-0.5 border-t-0 bg-slate-300 opacity-100 dark:opacity-50 my-3" />
-                                   <details class="collapse collapse-arrow ">
+                                   <details class="collapse collapse-arrow ring-slate-500 ring-1 my-1">
                                           <summary class="collapse-title text-sm font-medium">
-                                         <p class="text-sm"><span class="font-bold">Festivals</span></p>
+                                                 <p class="text-sm"><span class="font-bold">More ...</span></p>
                                           </summary>
-                                          <div class="collapse-content flex flex-col gap-1"> 
-                                               <p class="text-sm"><span class="font-bold">Binanog Festival<br></span>(Second Sunday of January) – Lambunao</p>  
-                                               <p class="text-sm"><span class="font-bold">Leganes Saad Festival<br></span>(Last week of January) – Leganes</p>     
-                                               <p class="text-sm"><span class="font-bold">Dinagyang Festival<br></span>(Last Sunday of January) – Iloilo City</p>     
-                                               <p class="text-sm"><span class="font-bold">Jimanban Festival<br></span>(Last week of January) – New Lucena</p>     
-                                               <p class="text-sm"><span class="font-bold">Hirinugyaw-Suguidanonay Festival<br></span>(Last week of January to first week of February) – Calinog</p> 
-                                               <p class="text-sm"><span class="font-bold">Kasadyahan Festival<br></span>(Fourth Saturday of January) – Iloilo City</p>     
-                                               <p class="text-sm"><span class="font-bold">Candelaria Fiesta<br></span>(February 2) – Jaro</p>    
-                                               <p class="text-sm"><span class="font-bold">Paraw Regatta Festival<br></span>(February) – Villa de Arevalo</p>      
+                                          <div class="collapse-content flex flex-col gap-1 "> 
+                                                 @foreach($sideInfo2 as $title => $body)
+                                                        <p class="text-sm"><span class="font-bold capitalize">{{ $title }}: <br></span>{{ $body }}</p>  
+                                                 @endforeach
                                           </div>
                                    </details>
-                                   <hr class="my-1 h-0.5 border-t-0 bg-slate-300 opacity-100 dark:opacity-50 my-3" />
-                                   <details class="collapse collapse-arrow join-item">
-                                   <summary class="collapse-title text-sm  font-medium">
-                                          <p class="text-sm"><span class="font-bold">Municipalities</span></p>
-                                   </summary>
-                                   <div class="collapse-content flex flex-col gap-1"> 
-                                          <p class="text-sm"><span class="font-bold">Ajuy</span> 5012</p>  
-                                          <p class="text-sm"><span class="font-bold">Alimodian</span> 5028</p>     
-                                          <p class="text-sm"><span class="font-bold">Anilao</span> 5009</p>     
-                                          <p class="text-sm"><span class="font-bold">Badiangan</span> 5033</p>     
-                                          <p class="text-sm"><span class="font-bold">Balasan</span> 5018</p>        
-                                          <p class="text-sm"><span class="font-bold">Banate</span> 5010</p>   
-                                          <p class="text-sm"><span class="font-bold">Barotac Nuevo</span> 5007</p>   
-                                          <p class="text-sm"><span class="font-bold">Barotac Viejo</span> 5011</p>   
-                                          <p class="text-sm"><span class="font-bold">Batad</span> 5016</p>   
-                                          <p class="text-sm"><span class="font-bold">Bingawan</span> 5041</p>   
-                                          <p class="text-sm"><span class="font-bold">Cabatuan</span> 5031</p>   
-                                          <p class="text-sm"><span class="font-bold">Calinog</span> 5040</p>   
-                                          <p class="text-sm"><span class="font-bold">Carles</span> 5013</p> 
-                                          <p class="text-sm"><span class="font-bold">Concepcion</span> 5019</p>   
-                                          <p class="text-sm"><span class="font-bold">Dingle</span> 5035</p>   
-                                          <p class="text-sm"><span class="font-bold">Dueñas</span> 5038</p> 
-                                          <p class="text-sm"><span class="font-bold">Dumangas</span> 5006</p>   
-                                          <p class="text-sm"><span class="font-bold">Estancia</span> 5017</p>   
-                                          <p class="text-sm"><span class="font-bold">Guimbal</span> 5022</p> 
-                                          <p class="text-sm"><span class="font-bold">Igbaras</span> 5029</p>   
-                                          <p class="text-sm"><span class="font-bold">Iloilo City</span> 5000</p>   
-                                          <p class="text-sm"><span class="font-bold">Janiuay</span> 5034</p> 
-                                          <p class="text-sm"><span class="font-bold">Lambunao</span> 5003</p>   
-                                          <p class="text-sm"><span class="font-bold">Lemery</span> 5043</p> 
-                                          <p class="text-sm"><span class="font-bold">Leon</span> 5026</p>
-                                          <p class="text-sm"><span class="font-bold">Maasin</span> 5030</p>   
-                                          <p class="text-sm"><span class="font-bold">Miagao</span> 5023</p> 
-                                          <p class="text-sm"><span class="font-bold">Mina</span> 5032</p>
-                                          <p class="text-sm"><span class="font-bold">New Lucena</span> 5005</p>
-                                          <p class="text-sm"><span class="font-bold">Oton</span> 5020</p>   
-                                          <p class="text-sm"><span class="font-bold">Paasi</span> 5037</p> 
-                                          <p class="text-sm"><span class="font-bold">Pavia</span> 5001</p>
-                                          <p class="text-sm"><span class="font-bold">Pototan</span> 5008</p>
-                                          <p class="text-sm"><span class="font-bold">San Dionisio</span> 5015</p>   
-                                          <p class="text-sm"><span class="font-bold">San Enrique</span> 5036</p> 
-                                          <p class="text-sm"><span class="font-bold">San Joaquin</span> 5024</p>
-                                          <p class="text-sm"><span class="font-bold">San Miguel</span> 5025</p>
-                                          <p class="text-sm"><span class="font-bold">San Rafael</span> 5039</p>   
-                                          <p class="text-sm"><span class="font-bold">Santa Barbara</span> 5002</p> 
-                                          <p class="text-sm"><span class="font-bold">Sara</span> 5014</p>
-                                          <p class="text-sm"><span class="font-bold">Tigbauan</span> 5021</p> 
-                                          <p class="text-sm"><span class="font-bold">Tubungan</span> 5027</p>
-                                          <p class="text-sm"><span class="font-bold">Zarraga</span> 5004</p>-
+                                   <details class="collapse collapse-arrow ring-slate-500 ring-1 ">
+                                          <summary class="collapse-title text-sm font-medium">
+                                                 <p class="text-sm"><span class="font-bold">Festivals</span></p>
+                                          </summary>
+                                          <div class="collapse-content flex flex-col gap-1"> 
+                                                 @foreach($sideFestivals as $title => $body)
+                                                        <p class="text-sm"><span class="font-bold">{{ $title }}<br></span>{{ $body }}</p>  
+                                                 @endforeach
+                                          </div>
+                                   </details>
+                                   <details class="collapse collapse-arrow ring-slate-500 ring-1 my-1">
+                                          <summary class="collapse-title text-sm  font-medium">
+                                                 <p class="text-sm"><span class="font-bold">Municipalities</span></p>
+                                          </summary>
+                                          <div class="collapse-content flex flex-col gap-1"> 
+                                                 @foreach($sideZipCodes as $title => $body)
+                                                        <p class="text-sm"><span class="font-bold">{{ $title }}</span> - {{ $body }}</p>  
+                                                 @endforeach
                                           </div>
                                    </details>
                             </div>
                      </div>
               </div>
-              <div class="w-full h-full p-3 ">
+{{-- history map faqs --}}
+              <div class="w-full h-full min-h-[90vh] p-3 bg-white my-bgs border-slate-400  rounded-lg">
                      <div class="flex flex-start gap-5">
-                            <h2 class="active-nav text-lg font-bold history-btn p-2 pb-0 ">History</h2>
-                            <h2 class="text-lg font-bold map-btn p-2 pb-0">Map</h2>
-                            <h2 class="text-lg font-bold facts-btn p-2 pb-0">Faqs</h2>
+                            <h2 class="active-nav text-lg font-bold history-btn p-2">History</h2>
+                            <h2 class="text-lg font-bold map-btn p-2">Map</h2>
+                            <h2 class="text-lg font-bold facts-btn p-2">Faqs</h2>
                      </div>
-                     <hr class="mb-3 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50 " />
-                     <div class="history w-full h-full">
+                     <hr class="mb-3 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50  " />
+                     <div class="history w-full h-full px-12">
+                            <h1 class="text-3xl grad-text ">TimeLine</h1>
                             <ul class="steps steps-vertical">
-                                   <li data-content="" class="step text-base text-left p-0">
-                                          In 1977, a Comprehensive Urban Development Plan was approved but struggled with rapid urbanization. By 1993, a new plan was prepared to address urban challenges, but its implementation awaited approval from the Housing and Land Use Regulatory Board (HLURB).
-                                   </li>
-                                   <li data-content="" class="step text-base text-left p-0 ">
-                                          After World War II, economic decline occurred due to factors like the sugar industry's decline. Recovery efforts focused on urban planning. Iloilo City joined the National Planning Commission's strategies. Modernization brought growth through fish ports, a seaport, and commerce, establishing Iloilo City as the Regional Center of Western Visayas.
-                                   </li>
-                                   <li data-content="" class="step text-base text-left p-0 ">
-                                          In the American Period, economic development in Iloilo was driven by road networks. British influence contributed to the sugar industry, and infrastructure projects linked warehouses to towns. Working-class districts were introduced, and architectural styles evolved. Iloilo became a chartered city in 1937, integrating American architectural elements.       
-                                   </li>
-                                   <li data-content="" class="step text-base text-left p-0 ">
-                                          During the Spanish Period, the dispersed barangay settlements evolved into towns and provinces. Parish churches, along with town halls and plazas, became central to town layouts. The government seat shifted to different locations due to threats, eventually settling near the Iloilo River. A road network radiated from a fort and remains in use today.     
-                                   </li>
-                                   <li data-content="" class="step text-base text-left p-0 ">
-                                          In the Pre-Spanish period, Filipino settlements were established near water bodies like rivers. The Iloilo region had bamboo and grass huts along the coasts and rivers, utilizing the surrounding natural resources for clothing, shelter, and tools. Public buildings and places of worship were lacking.
-                                   </li>
-                                 </ul>
+                                   @foreach($eventsTimeline as $title => $body)
+                                          <li data-content="" class="step text-base flex p-0">
+                                                 {{ $body }} 
+                                          </li>                                   
+                                   @endforeach
+                            </ul>
                      </div>
-                     <div class="map w-full h-full">
-                     {{-- map --}}
-                            <div class="flex justify-center gap-6">
-                                   <div class="w-[40%]">
-                                          <img src="{{ asset('assets/img/districts/Iloilo_First_Legislative_District_0.png') }}" alt="iloilo" srcset="" class="h-[400px]">
+                     <div class="map w-full h-full px-12">
+{{-- map --}}
+                            <div class="w-full flex flex-col justify-center gap-6">
+                            <h1 class="text-3xl grad-text">Maps</h1>
+                                   <div class="flex gap-6">
+                                          <div class="w-fit flex flex-col gap-4 h-fit p-3 district-div">
+                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="1">District 1</button>
+                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="2">District 2</button>
+                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="3">District 3</button>
+                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="4">District 4</button>
+                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="5">District 5</button>
+                                          </div>
+                                          <div class="flex flex-col gap-2">
+                                                 <ul class="under-district w-[150px] h-full border-2 p-3">
+                                                 </ul>
+                                          </div>
+                                          <div class="w-full">
+                                                 <img src="{{ asset('assets/img/districts/District_1.png') }}" alt="iloilo" id="districtimg" class="min-h-[300px]">
+                                          </div>
                                    </div>
-                                   <div class="w-[40%]">
-                                          <iframe class="h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88699.52880569769!2d122.51314347178354!3d10.734298207910358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee56fe538d781%3A0xe8250cd6bc30a488!2sIloilo%20City%2C%20Iloilo!5e0!3m2!1sen!2sph!4v1693472656413!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                   <div class="w-full p-10">
+                                          <iframe class="w-full h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125441.89780437473!2d122.46596845615959!3d10.729909310891514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee56fe538d781%3A0xe8250cd6bc30a488!2sIloilo%20City%2C%20Iloilo!5e0!3m2!1sen!2sph!4v1693658966016!5m2!1sen!2sph" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                    </div>
                             </div>
                      </div>
-                     {{-- faq --}}
-                     <div class="facts w-full h-full flex flex-col gap-5">
-                            <h1 class="text-[2vw]">Frequently Ask Questions</h1>
-                            <details class="collapse collapse-plus my-bgs">
-                                   <summary class="collapse-title text-xl font-medium">
-                                          Where in the Philippines is Iloilo located?
-                                   </summary>
-                                   <div class="collapse-content"> 
-                                     <p>
-                                          Iloilo is occupies the central and eastern section of Panay island in the Western Visayas region.
-                                     </p>
-                                   </div>
-                            </details>
-                            <details class="collapse collapse-plus my-bgs">
-                                   <summary class="collapse-title text-xl font-medium">
-                                          Is Iloilo a city or province?
-                                   </summary>
-                                   <div class="collapse-content"> 
-                                     <p>
-                                          Iloilo is a province with its capital of the same name.
-                                     </p>
-                                   </div>
-                            </details>
-                            <details class="collapse collapse-plus my-bgs">
-                                   <summary class="collapse-title text-xl font-medium">
-                                          What is the Capital of Iloilo?
-                                   </summary>
-                                   <div class="collapse-content"> 
-                                     <p>
-                                          The capital of Iloilo is Iloilo City.
-                                     </p>
-                                   </div>
-                            </details>
-                            <details class="collapse collapse-plus my-bgs">
-                                   <summary class="collapse-title text-xl font-medium">
-                                          How many islands are in Iloilo?
-                                   </summary>
-                                   <div class="collapse-content"> 
-                                     <p>
-                                          There are 55 islands in the province of Iloilo.
-                                     </p>
-                                   </div>
-                            </details>
-                            <details class="collapse collapse-plus my-bgs">
-                                   <summary class="collapse-title text-xl font-medium">
-                                          What does Iloilo mean?
-                                   </summary>
-                                   <div class="collapse-content"> 
-                                     <p>
-                                          Iloilo came from the Hiligaynon word “Ilong-Ilong” or the Kinaray-a “Irong-Irong”, meaning nose-like, which 
-                                          refers to the nose-shaped islet formed by the river now called Iloilo River.
-                                     </p>
-                                   </div>
-                            </details>
-                            <details class="collapse collapse-plus my-bgs">
-                                   <summary class="collapse-title text-xl font-medium">
-                                          What is Iloilo famous?
-                                   </summary>
-                                   <div class="collapse-content"> 
-                                     <p>
-                                          Iloilo is famous for Dinagyang Festival, heritage sites, la paz batchoy, and pancit molo.
-                                     </p>
-                                   </div>
-                            </details>
+                     {{-- faqs --}}
+                     <div class="facts w-full h-full flex flex-col gap-5 px-12">
+                            <h1 class="text-3xl grad-text ">Frequently Ask Questions</h1>
+                            <div class="w-full flex flex-wrap gap-3">
+                                   @foreach($faqs as $title => $body)
+                                          <details class="max-w-[49%] h-fit collapse collapse-plus my-bgs text-base">
+                                                 <summary class="collapse-title font-medium ">
+                                                        {{ $title }}
+                                                 </summary>
+                                                 <div class="collapse-content "> 
+                                                 <p>
+                                                        {{ $body }}
+                                                 </p>
+                                                 </div>
+                                          </details>                                         
+                                   @endforeach
+                            </div> 
                      </div>        
               </div>
        </div>

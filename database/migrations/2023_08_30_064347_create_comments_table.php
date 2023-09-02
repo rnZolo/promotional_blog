@@ -15,8 +15,10 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->default('Anonymouse')->nullable();
+            $table->string('email')->default('Anonymouse');
             $table->longText('comment');
+            $table->boolean('updated_comment')->default(false);
+            $table->integer('rating')->nullable();
             $table->timestamps();
         });
     }

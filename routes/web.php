@@ -17,9 +17,7 @@
                         return view('welcome');
                         })->name('welcome');
 
-    Route::get('/about', function(){
-                        return view('page.about');
-                        })->name('about');
+    Route::get('/about', 'InformationController@info')->name('about');
 
     Route::get('/where-to-go', function(){
                         return view('page.wheretogo');
