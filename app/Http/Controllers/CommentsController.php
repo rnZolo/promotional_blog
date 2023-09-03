@@ -36,15 +36,21 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     { 
-        // dd(request()->rating());
+        $validatedData = $request->validate([
+            'email' => 'required|email',
+            'comment' => 'required|min:3',
+        ]);
+
         $new = new Comments();
-        $new->name = $request->input('commenter', '');
-        $new->comment =  $request->input('comment', '');
-        $new->rating =  $request->input('rating', '');
-        $new->update_status = $request->input('update_status', '0');
-        dd($new);
-        $new->create();
-        
+        $new->email = $request->input('email', 'anonymouse');
+        $new->comment =  $request->input('comment', 'sample comments');
+        $new->updated_comment = $request->input('update_status', '3');
+        if(!request()->add_rating == null){
+            $new->rating =  $request->input('rating');
+        }
+        if($new->save()){
+            return back();
+        }
     }
 
     /**
@@ -87,8 +93,10 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comments $comments)
+    public function destroy($id)
     {
-        //
+        // dd($id);
+        Comments::where('id', $id)->delete();
+        return back();
     }
 }

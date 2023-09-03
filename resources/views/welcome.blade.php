@@ -12,31 +12,31 @@
                </div>
                <swiper-container class="mySwiper mask-splash z-20 min-h-[500px] overflow-visible" loop="true" space-between="0" autoplay="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
                   <swiper-slide class="">
-                  <img class="  " src="{{ asset('assets/img/11molo.jpg') }}" />
+                  <img class="  " src="{{ asset('assets/img/historical_landmarks/11molo.jpg') }}" />
                   </swiper-slide>
                   <swiper-slide>
-                  <img class="  " src="{{ asset('assets/img/dinagyang2.png') }}" />
+                  <img class="  " src="{{ asset('assets/img/festival/dinagyang2.png') }}" />
                   </swiper-slide>
                   <swiper-slide>
-                  <img class="  " src="{{ asset('assets/img/11isladegigantes.png') }}" />
+                  <img class="  " src="{{ asset('assets/img/beach_islands/11isladegigantes.png') }}" />
                   </swiper-slide>
                   <swiper-slide>
-                  <img class="  " src="{{ asset('assets/img/11garin2.jpg') }}" />
+                  <img class="  " src="{{ asset('assets/img/nature_camps/11garin2.jpg') }}" />
                   </swiper-slide>
                   <swiper-slide>
-                  <img class="  " src="{{ asset('assets/img/11molo-mansion-s-exterior.jpg') }}" />
+                  <img class="  " src="{{ asset('assets/img/historical_landmarks/11molo-mansion-s-exterior.jpg') }}" />
                   </swiper-slide>
                   <swiper-slide>
-                  <img class="  " src="{{ asset('assets/img/11miagao.png') }}" />
+                  <img class="  " src="{{ asset('assets/img/historical_landmarks/11miagao.png') }}" />
                   </swiper-slide>
                   <swiper-slide>
-                  <img class="  " src="{{ asset('assets/img/sicogonisland.jpg') }}" />
+                  <img class="  " src="{{ asset('assets/img/beach_islands/sicogonisland.jpg') }}" />
                   </swiper-slide>
                   <swiper-slide>
-                  <img class="  " class="object-cover" src="{{ asset('assets/img/11nasadjanfalls.jpg') }}" />
+                  <img class="  " class="object-cover" src="{{ asset('assets/img/nature_camps/11nasadjanfalls.jpg') }}" />
                   </swiper-slide>
                   <swiper-slide>
-                  <img class="  " src="{{ asset('assets/img/11calle-real1.jpg') }}" />
+                  <img class="  " src="{{ asset('assets/img/historical_landmarks/11calle-real1.jpg') }}" />
                   </swiper-slide>
                </swiper-container>
          </div>
@@ -77,7 +77,7 @@
                      </div>
                   </div>
                   <div class="collapse collapse-plus my-bgs">
-                     <input type="radio" name="my-accordion-3" checked="checked" /> 
+                     <input type="radio" name="my-accordion-3"/> 
                      <div class="collapse-title text-meduim font-bold uppercase grad-text ">
                         Pristine Beaches and Islands
                      </div>
@@ -110,7 +110,7 @@
                      </div>
                   </div>
                   <div class="collapse collapse-plus my-bgs">
-                     <input type="radio" name="my-accordion-3" checked="checked" /> 
+                     <input type="radio" name="my-accordion-3" /> 
                      <div class="collapse-title text-meduim font-bold uppercase grad-text ">
                         Warm Ilonggo Hospitality
                      </div>

@@ -19,13 +19,9 @@
 
     Route::get('/about', 'InformationController@info')->name('about');
 
-    Route::get('/where-to-go', function(){
-                        return view('page.wheretogo');
-                        })->name('wheretogo');              
+    Route::get('/where-to-go', 'DestinationsController@index')->name('wheretogo');              
 
-    Route::get('/gallery', function(){
-                        return view('page.gallery');
-                        })->name('gallery');
+    Route::get('/gallery', 'GalleryController@index')->name('gallery');
 
     Route::prefix('ContactUs')->group(function (){
                         Route::resource('comment', 'CommentsController');

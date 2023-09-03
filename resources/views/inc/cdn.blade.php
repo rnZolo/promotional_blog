@@ -20,11 +20,11 @@
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 {{-- font_awesome --}}
 <script src="https://kit.fontawesome.com/910cc9fb7b.js" crossorigin="anonymous"></script>
-{{-- custom js --}}
-<script type="text/javascript" src="{{ asset('assets/js/nav.js') }}" defer></script>
 {{-- swiper --}}
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+{{-- sweetalert --}}
+<!-- <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css"> -->
+{{-- custom js --}}
+<script type="text/javascript" src="{{ asset('assets/js/index.js') }}" defer></script>

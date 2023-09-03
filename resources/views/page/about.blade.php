@@ -48,13 +48,13 @@
 {{-- history map faqs --}}
               <div class="w-full h-full min-h-[90vh] p-3 bg-white my-bgs border-slate-400  rounded-lg">
                      <div class="flex flex-start gap-5">
-                            <h2 class="active-nav text-lg font-bold history-btn p-2">History</h2>
-                            <h2 class="text-lg font-bold map-btn p-2">Map</h2>
-                            <h2 class="text-lg font-bold facts-btn p-2">Faqs</h2>
+                            <h2 class="active-nav text-lg font-bold item1-btn nbtn grad-text p-2">History</h2>
+                            <h2 class="text-lg font-bold item2-btn nbtn p-2">Map</h2>
+                            <h2 class="text-lg font-bold item3-btn nbtn p-2">Faqs</h2>
                      </div>
                      <hr class="mb-3 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50  " />
-                     <div class="history w-full h-full px-12">
-                            <h1 class="text-3xl grad-text ">TimeLine</h1>
+                     <div class="item1 w-full h-full px-12 ">
+                            <h1 class="text-3xl grad-text uppercase">TimeLine</h1>
                             <ul class="steps steps-vertical">
                                    @foreach($eventsTimeline as $title => $body)
                                           <li data-content="" class="step text-base flex p-0">
@@ -63,20 +63,20 @@
                                    @endforeach
                             </ul>
                      </div>
-                     <div class="map w-full h-full px-12">
 {{-- map --}}
+                     <div style="display:none;" class="item2 w-full h-full px-12 ">
                             <div class="w-full flex flex-col justify-center gap-6">
-                            <h1 class="text-3xl grad-text">Maps</h1>
+                            <h1 class="text-3xl grad-text uppercase">Map</h1>
                                    <div class="flex gap-6">
                                           <div class="w-fit flex flex-col gap-4 h-fit p-3 district-div">
-                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="1">District 1</button>
-                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="2">District 2</button>
-                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="3">District 3</button>
-                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="4">District 4</button>
-                                                 <button class="btn hover:bg-blue-900 my-bgs district w-[230px]" value="5">District 5</button>
+                                                 <button class="bg-blue-900 text-white font-bold btn hover:bg-blue-900 my-bgs district-btn w-[230px]" value="1">District 1</button>
+                                                 <button class="btn hover:bg-blue-900 my-bgs district-btn w-[230px]" value="2">District 2</button>
+                                                 <button class="btn hover:bg-blue-900 my-bgs district-btn w-[230px]" value="3">District 3</button>
+                                                 <button class="btn hover:bg-blue-900 my-bgs district-btn w-[230px]" value="4">District 4</button>
+                                                 <button class="btn hover:bg-blue-900 my-bgs district-btn w-[230px]" value="5">District 5</button>
                                           </div>
                                           <div class="flex flex-col gap-2">
-                                                 <ul class="under-district w-[150px] h-full border-2 p-3">
+                                                 <ul class="under-district w-[150px] h-full p-3 list-disc">
                                                  </ul>
                                           </div>
                                           <div class="w-full">
@@ -88,17 +88,17 @@
                                    </div>
                             </div>
                      </div>
-                     {{-- faqs --}}
-                     <div class="facts w-full h-full flex flex-col gap-5 px-12">
-                            <h1 class="text-3xl grad-text ">Frequently Ask Questions</h1>
-                            <div class="w-full flex flex-wrap gap-3">
+{{-- faqs --}}
+                     <div style="display:none;" class="item3 w-full h-full flex flex-col gap-5 px-12 text-black">
+                            <h1 class="text-3xl grad-text uppercase">Frequently Ask Questions</h1>
+                            <div class="w-full flex flex-wrap gap-3 text-black">
                                    @foreach($faqs as $title => $body)
-                                          <details class="max-w-[49%] h-fit collapse collapse-plus my-bgs text-base">
-                                                 <summary class="collapse-title font-medium ">
+                                          <details class="max-w-[49%] h-fit collapse collapse-plus my-bgs text-base text-black" >
+                                                 <summary class="collapse-title text-black font-bold">
                                                         {{ $title }}
                                                  </summary>
-                                                 <div class="collapse-content "> 
-                                                 <p>
+                                                 <div class="collapse-content text-black "> 
+                                                 <p class="text-black mytxt-b">
                                                         {{ $body }}
                                                  </p>
                                                  </div>
