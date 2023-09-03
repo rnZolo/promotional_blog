@@ -1,0 +1,11 @@
+1.Run git clone <clone-project-link>
+// install alll required vendor
+2.Run composer install 
+// create a .env file
+3.Run cp .env.example .env
+// generate a app_key
+4.Run php artisan key:generate
+// create table on your migration files 
+5.Run php artisan migrate
+6.Run php artisan serve
+7.Go to link localhost:8000
