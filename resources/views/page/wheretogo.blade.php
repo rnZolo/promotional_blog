@@ -1,7 +1,7 @@
 @extends('layout.main_layout')
 
 @section('where')
-       <div class="w-full h-fit min-h-screen  px-[3%] text-black pt-[100px] flex flex-wrap gap-3">
+       <div class="w-full h-fit min-h-screen px-[3%] text-black pt-[100px] flex flex-wrap gap-3">
               <div class="z-20 w-full h-fit flex flex-wrap gap-10">
 {{-- historical landmarks --}}
                      <div class="flex w-full h-[330px] relative items-center">
@@ -144,6 +144,6 @@
                                    </div>
                             </div>
                      </div>
-              </div> {{--end--}}
+              </div> 
        </div>
 @endsection

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @include("inc.cdn")
+    @include("inc.links_scripts")
     <title>{{ $page_title ?? ''}}</title>
     <style>
         *{
@@ -32,6 +32,7 @@
         @yield('where')
         @yield('gallery')
         @yield('contactus')
+        @yield('content')
         <hr class="my-1 h-0.5 border-t-0 bg-slate-700 opacity-100 dark:opacity-50 mt-3" />
     </div>
     
@@ -57,5 +58,6 @@
             <a href="#"><i class="bi bi-linkedin text-[16px] text-blue-900"></i></a>
         </div>  
        </footer>
+       @yield('jsbottom')
 </body>
 </html>

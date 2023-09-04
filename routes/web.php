@@ -12,7 +12,6 @@
 */
     Route::redirect('/', '/blogs', 302);
 
-
     Route::get('/blogs', function () {
                         return view('welcome');
                         })->name('welcome');
@@ -22,9 +21,19 @@
     Route::get('/where-to-go', 'DestinationsController@index')->name('wheretogo');              
 
     Route::get('/gallery', 'GalleryController@index')->name('gallery');
-
+        
     Route::prefix('ContactUs')->group(function (){
-                        Route::resource('comment', 'CommentsController');
+                        Route::resource('comment', 'CommentsController')->only(['index', 'store']);
+                        Route::delete('comment', 'CommentsController@destroy')->name('comment.destroy');
                          });
+
+    Route::get('post', function(){
+        return view('page.post');
+    });
+             
+    
+
+
+
 
 

@@ -1,12 +1,12 @@
 // const { each } = require("lodash");
 
-// const { each } = require("lodash");
 $(window).on('load', function () {
     list(underDistrict, 1);
 });
 
+// page navigations 
 $('.item1-btn').click(function () {
-    showAbout($('.item1'), [$('.item3'), $('.item2')]);
+    showAbout($('.item1'), [$('s.item3'), $('.item2')]);
     imageClose();
     $('.item1-btn').addClass('grad-text');
 })
@@ -34,7 +34,7 @@ function showAbout(s, h) {
     })
 };
 
-// event deligation
+// event deligation  About/Map
 let underDistrict = [
     [
         "Guimbal",
@@ -86,7 +86,7 @@ let underDistrict = [
         "Sara",
     ],
 ];
-
+// change map and list
 $('.district-div').click(function (event) {
     $('.district-btn').each((element, index) => {
         console.log(element, index);
@@ -99,10 +99,25 @@ $('.district-div').click(function (event) {
         list(underDistrict, districtNumber);
     }
 });
+
+// show slist of district 
+function list(ar, i) {
+    ar.forEach((element, index) => {
+        if (index == i) {
+            $('.under-district').text('');
+            element.forEach(val => {
+                $('.under-district').append(`<li>${val}</li>`)
+            })
+        }
+    });
+}
+
+//gallery 
 $('.hide-pic-div').click(function () {
     imageClose();
 });
 
+// show gallery image card
 $('.img-gal').click(function (event) {
     let path = $(event.target).attr('src');
     let title = $(event.target).siblings('h1').text();
@@ -118,17 +133,27 @@ function imageClose() {
     $('.pic-div').removeClass("gall-clicked").addClass('hidden');
 }
 
-function list(ar, i) {
-    ar.forEach((element, index) => {
-        if (index == i) {
-            $('.under-district').text('');
-            element.forEach(val => {
-                $('.under-district').append(`<li>${val}</li>`)
-            })
-        }
-    });
-}
+// show rating
+$('#add_rating').click(function () {
+      return $('.rating').toggleClass('hidden');
+});
 
+// show delete modal
+$('.comments').click(function(event){
+    if($(event.target).hasClass('confirm-del')){
+        $('.modal-del').removeClass('hidden');
+        console.log($(event.target).val());
+        let id = $(event.target).val();
+        $('#sure-del').attr('value',  id);
+    }
+});
+
+// hide delete modal
+$('.cancel-del').click(function(){
+    $('.modal-del').addClass('hidden');
+});
+
+// slider where-to-go
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -139,45 +164,4 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-
-$('#add_rating').click(function () {
-      return $('.rating').toggleClass('hidden');
-});
-
-{/* <script src="sweetalert2.min.js"></script> */}
-// $('.confirm-del').click(function () {
-//     const swalWithBootstrapButtons = Swal.mixin({
-//         customClass: {
-//             confirmButton: 'btn btn-success',
-//             cancelButton: 'btn btn-danger'
-//         },
-//         buttonsStyling: false
-//     })
-
-//     swalWithBootstrapButtons.fire({
-//         title: 'Are you sure?',
-//         text: "You won't be able to revert this!",
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonText: 'Yes, delete it!',
-//         cancelButtonText: 'No, cancel!',
-//         reverseButtons: true
-//     }).then((result) => {
-//         if (result.isConfirmed) {
-//             swalWithBootstrapButtons.fire(
-//                 'Deleted!',
-//                 'Your file has been deleted.',
-//                 'success'
-//             )
-//         } else if (
-          
-//             result.dismiss === Swal.DismissReason.cancel
-//         ) {
-//             swalWithBootstrapButtons.fire(
-//                 'Cancelled',
-//                 'Your imaginary file is safe :)',
-//                 'error'
-//             )
-//         }
-//     })
-// });
+      

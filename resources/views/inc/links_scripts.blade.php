@@ -24,7 +24,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
 {{-- sweetalert --}}
-<!-- <script src="sweetalert2.min.js"></script>
-<link rel="stylesheet" href="sweetalert2.min.css"> -->
+
 {{-- custom js --}}
 <script type="text/javascript" src="{{ asset('assets/js/index.js') }}" defer></script>

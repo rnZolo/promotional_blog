@@ -7,7 +7,7 @@
          <div class="absolute flex flex-col justify-center tagline ">
                   <h1 class="z-30 font-bold uppercase grad-text flex flex-col gap-0">
                      <span class="text-3xl">It has to be</span>
-                     <span class="text-9xl">Iloilo</span>
+                     <a href="#welcome" class="text-9xl">Iloilo</a>
                   </h1>
                </div>
                <swiper-container class="mySwiper mask-splash z-20 min-h-[500px] overflow-visible" loop="true" space-between="0" autoplay="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
@@ -42,12 +42,12 @@
          </div>
 
          <div class="px-[5%] text-white relative my-bg pt-[350px]">
-         <div class="custom-shape-divider-top-1693638366">
+         <div class="custom-shape-divider-top-1693638366" >
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
             </svg>
          </div>
-            <h2 class="text-2xl font-bold grad-text"> Exploring Enchanting Iloilo: A Journey Through History and Nature</h2>
+            <h2 class="text-2xl font-bold grad-text" id='welcome'> Exploring Enchanting Iloilo: A Journey Through History and Nature</h2>
             <p class="text-center my-3">Welcome to the captivating province of Iloilo, nestled in the heart of the Philippines. This enchanting destination offers a perfect blend of rich history, vibrant culture, and breathtaking natural beauty. Join us on a virtual tour through the diverse attractions, mouthwatering cuisine, and warm hospitality that make Iloilo a must-visit for every traveler.</p>
             <hr class="my-12 h-0.5 border-t-0 bg-white opacity-100 dark:opacity-50 my-3" />
             <div class="flex gap-10 flex-wrap my-6">
@@ -130,15 +130,6 @@
             </div>
          
          </div> 
-         {{-- {{  end flex }} --}}
-
-
-
-
-
-
-
-
       </div>
        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 @endsection
